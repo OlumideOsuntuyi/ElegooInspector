@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# App runtime output and downloaded model weights -- large, per-machine,
+# and not something a fresh checkout should ship with. The Haar cascade is
+# the exception: it's small and vendored on purpose (see vision/detection.py).
+models/*
+!models/.gitkeep
+!models/haarcascade_frontalface_default.xml
+recordings/*
+!recordings/.gitkeep
+*.log
+
+# Local app config (see elegoo_inspector/config.py, lives in the home dir
+# by default, but ignore it here too in case it ever lands in-tree)
+.elegoo_inspector.json
+
+# Local assistant/session state -- never part of the project
+.remember/
+.claude/
+
